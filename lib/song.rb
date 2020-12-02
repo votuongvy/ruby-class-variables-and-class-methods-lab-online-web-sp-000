@@ -75,6 +75,10 @@
 # #   counts[word] += 1
 # # end
 
+# names = ["Jason", "Jason", "Teresa", "Judah", "Michelle", "Judah", "Judah", "Allison"]
+# counts = Hash.new(0)
+# names.each { |name| counts[name] += 1 }
+
 class Song
   
   attr_accessor :name, :artist, :genre
@@ -106,8 +110,7 @@ class Song
   
   def self.genre_count
     genre_count = {}
-    @@genres.each do |genre|
-      if 
+    @@genres.each { |genre| genre_count[genre] += 1}
   end
   
 end
